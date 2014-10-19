@@ -21,6 +21,16 @@
     
   }
   
+  #footer {
+    li > * {
+      font-size: 1.5em !important;
+      line-height: 50% !important;
+    }
+    li + li > * {
+      font-size: 1em !important;
+    }
+  }
+  
 }
 
 form * {
