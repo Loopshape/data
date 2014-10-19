@@ -1,0 +1,39 @@
+#login {
+  
+  * {
+    border-width: 0 !important;
+  }
+  
+  legend {
+    display: none;
+  }
+  
+  h2:first-of-type,
+  h3:first-of-type {
+    display: none;
+  }
+  
+  input {
+    clear: both;
+    float: left;
+    width: 100%;
+    background-color: $interactField-color !important;
+    padding: 6px 10px !important;
+  }
+  
+  input[type="submit"], button {
+    clear: both;
+    float: left;
+    width: 100%;
+    background-color: $interactButton-color !important;
+    margin: 15px 0;
+    &:hover {
+      background-color: $interactButton-color + #111 !important;
+    }
+  }
+  
+}
+
+div#gplus {
+  float: right;
+} 

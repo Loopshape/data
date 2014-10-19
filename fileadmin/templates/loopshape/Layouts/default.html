@@ -1,0 +1,73 @@
+<section id="page">
+
+    <div id="header">
+
+        <div id="logo">
+            <f:format.html parseFuncTSPath="">
+                {logo}
+            </f:format.html>
+        </div>
+
+        <div class="body">
+            <f:format.html parseFuncTSPath="">
+                {header}
+            </f:format.html>
+        </div>
+
+        <div id="login">
+            <f:format.html parseFuncTSPath="">
+                {login}
+                <div class="clearer"></div>
+                <div id="gplus">
+                    {gplus}
+                </div>
+            </f:format.html>
+        </div>
+
+    </div>
+
+    <div id="teaser">
+        <f:format.html parseFuncTSPath="">
+            {teaser}
+        </f:format.html>
+    </div>
+
+    <div id="stage">
+
+        <div id="navi">
+            <f:format.html parseFuncTSPath="">
+                {navi}
+            </f:format.html>
+        </div>
+
+        <div class="cWrap">
+
+            <div id="content">
+                <!--TYPO3SEARCH_begin-->
+                <f:format.html parseFuncTSPath="">
+                    {content}
+                    <div class="clearer"></div>
+                    {gshare}
+                </f:format.html>
+                <!--TYPO3SEARCH_end-->
+            </div>
+
+            <div id="sidebar">
+                <f:format.html parseFuncTSPath="">
+                    {sidebar}
+                </f:format.html>
+            </div>
+
+        </div>
+
+        <div class="clearer"></div>
+
+    </div>
+
+    <div id="footer">
+        <f:format.html parseFuncTSPath="lib.footer">
+            {footer}
+        </f:format.html>
+    </div>
+
+</section>

@@ -1,0 +1,72 @@
+#content {
+  
+  form {
+    position: relative;
+    left: -15px;
+    min-width: 640px;
+    
+    legend {
+      visibility: none !important; 
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    label {
+      clear: left;
+      float: left;
+      margin-top: 8px;
+      margin-bottom: 30px;
+      min-width: 80px;
+    }
+    
+    input[type="text"] {
+      float: right;
+      padding: 0;
+      margin: 4px 0 15px;
+      padding: 6px !important;
+      width: 100%;
+      max-width: 84%;
+      background-color: $interactField-color !important;
+    }
+    
+    textarea {
+      background-color: $interactField-color !important;
+      padding: 6px !important;
+      resize: none;
+    }
+    
+    input[type="submit"] {
+      padding: 15px !important;
+      background-color: $interactButton-color + #111 !important;
+      border: none !important;
+      &:hover {
+        background-color: $interactButton-color + #222 !important;
+      }
+    }
+    
+    fieldset {
+      border: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+  }
+  
+}
+
+@media all and (max-width:720px) {
+  #content {
+    
+    form {
+      min-width: 320px;
+      
+      input {
+        max-width: 60% !important;
+      }
+      
+    }
+    
+  }
+}

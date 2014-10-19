@@ -1,0 +1,29 @@
+#teaser {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  display: block;
+
+  #teaserImage{
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    
+    border-top: 20px solid $borderBar-color !important;
+    border-bottom: 20px solid $borderBar-color !important;
+    
+    overflow: hidden;
+    
+    .panel {
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    
+  } 
+
+}
