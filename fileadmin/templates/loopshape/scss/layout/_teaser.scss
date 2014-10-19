@@ -2,17 +2,23 @@
   position: relative;
   width: 100%;
   height: auto !important;
-  display: block;
+  display: none;
 
-  #teaserImage{
+  #teaserImage {
     position: relative;
     width: 100%;
-    height: auto !important;
+    height: 0 !important;
     
     border-top: 20px solid $borderBar-color !important;
     border-bottom: 20px solid $borderBar-color !important;
     
     overflow: hidden;
+    
+-webkit-transition: all 3000ms ease-in-out;
+-moz-transition: all 3000ms ease-in-out;
+-ms-transition: all 3000ms ease-in-out;
+-o-transition: all 3000ms ease-in-out;
+transition: all 3000ms ease-in-out;
     
     .panel {
       position: absolute;
@@ -22,6 +28,10 @@
       min-width: 100% !important;
       max-width: 100% !important;
       height: auto !important;
+    }
+    
+    &.active {
+      height: 550px !important;
     }
     
   } 

@@ -14,6 +14,8 @@ require([], function() {
 
             var item = this.page;
             this.setElement(item);
+            
+            $('#teaser').show().find('#teaserImage').addClass('active');
 
             return;
         },
@@ -26,15 +28,6 @@ require([], function() {
             
             Pace.start();
             this.windowWidth = $(window).width();
-            
-            $('body').find('a').each(function() {
-                var linkBuffer = $(this).prop('href');
-                $(this).hasClass('external').attr('target', '_blank');
-            });
-            
-            setTimeout(function() {
-                $('#teaser #teaserImage').slideDown('slow');
-            }, 1000);
             
             _.bindAll(this, 'ajax');
             

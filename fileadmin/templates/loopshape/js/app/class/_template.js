@@ -1,21 +1,24 @@
 // additional template-script
-require( ['jquery', 'underscore', 'backbone'], function( $, _, Backbone ) {'use strict';
+require(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
+    'use strict';
 
-	var Template = Backbone.View.extend( {
+    var Template = Backbone.View.extend({
 
-		render : function( ) {
-			return;
-		},
-		
-		events : {},
+        render : function() {
+            
+            //alert('template rendered');
+            
+            return;
+        },
 
-		initialize : function( ) {
-			_.bindAll( this, 'render' );
-			this.render( );
-		}
-		
-	} );
+        events : {},
 
-	var template = new Template;
+        initialize : function() {
+            _.bindAll(this, 'render');
+            this.render();
+        }
+    });
 
-} );
+    var template = new Template;
+
+});

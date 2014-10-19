@@ -77,8 +77,11 @@ page {
         8890 = TEXT
         8890.value = <script>function signinCallback(authResult) {if (authResult['access_token']) {document.getElementById('signinButton').setAttribute('style', 'display: none');} else if (authResult['error']) {}};</script>
         
-        50000 = TEXT
-        50000.value = <script src="./Templates/js/require.js" data-main="./main"></script>
+        9500 = TEXT
+        9500.value = <script src="./Templates/js/require.js" data-main="./Templates/js/main"></script>
+        
+        #9510 = TEXT
+        #9510.value = <script src="./Templates/js/script.min.js"></script>
         
         #9500 = TEXT
         #9500.value = <script src="Templates/js/require.js"></script>
