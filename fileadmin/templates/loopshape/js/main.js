@@ -22,7 +22,7 @@ require.config({
         iframeautoheight : './app/lib/jquery-autoheight/jquery.iframe-auto-height.plugin.1.9.3.min',
         tooltipsy : './app/lib/tooltipsy-master/tooltipsy.min',
         pace : './app/lib/pace.min',
-        foundation : './../scss/foundation/js/foundation.min.js',
+        foundation : './../scss/foundation/js/foundation.min',
         uniform : './../css/uniform/jquery.uniform.min',
         // Website Logic
         app : './app/app',
@@ -78,4 +78,4 @@ require.config({
 
     waitSeconds : 0
 
-}), define(["jquery", "underscore", "backbone", 'tweenmax', 'timelinemax', 'foundation', 'app']); 
+}), define(["jquery", "underscore", "backbone", 'tweenmax', 'timelinemax', 'app']); 

@@ -32,15 +32,18 @@
     }
     
     textarea {
+      height: 400px;
       background-color: $interactField-color !important;
       padding: 6px !important;
       resize: none;
     }
     
     input[type="submit"] {
+      display: inline-block;
+      margin-top: 15px;
       padding: 15px !important;
       background-color: $interactButton-color + #111 !important;
-      border: none !important;
+      border: 1px solid #012 !important;
       &:hover {
         background-color: $interactButton-color + #222 !important;
       }
