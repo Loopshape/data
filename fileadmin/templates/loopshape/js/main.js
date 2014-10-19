@@ -24,6 +24,7 @@ require.config({
         pace : './app/lib/pace.min',
         foundation : './../scss/foundation/js/foundation.min',
         uniform : './../css/uniform/jquery.uniform.min',
+        mousewheel : './app/lib/jquery-mousewheel/jquery.mousewheel.min',
         // Website Logic
         app : './app/app',
         template : './app/class/_template'
@@ -66,12 +67,16 @@ require.config({
             deps : ['jquery'],
             exports : 'Tooltipsy'
         },
+        mousewheel : {
+            deps : ['jquery'],
+            exports : 'Mousewheel'
+        },
         pace : {
             deps : ['jquery'],
             exports : 'Pace'
         },
         app : {
-            deps : ['jquery', 'migrate', 'template', 'pace'],
+            deps : ['jquery', 'migrate', 'mousewheel', 'template', 'pace'],
             exports : 'App'
         }
     },

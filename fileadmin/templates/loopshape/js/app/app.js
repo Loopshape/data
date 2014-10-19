@@ -1,5 +1,5 @@
 // module dependencies
-require(['foundation'], function(Foundation) {
+require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
     'use strict';
 
     // Backbone definitions for App
@@ -14,6 +14,10 @@ require(['foundation'], function(Foundation) {
 
             var item = this.page;
 
+            var dx = 0;
+            var dy = 0;
+            var df = 0;
+
             /* DOCUMENT READY SCRIPT :: START */
 
             $('#teaser').show().find('#teaserImage').addClass('active').animate({
@@ -25,6 +29,22 @@ require(['foundation'], function(Foundation) {
                 if (itemIndex >= 3 && itemIndex <= 12)
                     $(this).attr('target', '_blank');
                 itemIndex++;
+            });
+
+            $page = $('#page');
+            $(window).bind('mousewheel', function(e) {
+
+                $offy = $page.offset().top;
+
+                if (e.originalEvent.wheelDelta > 0) {
+                    $page.animate({
+                        'top' : '+=6px'
+                    }, 250);
+                } else {
+                    $page.animate({
+                        'top' : '-=6px'
+                    }, 250);
+                }
             });
 
             /* DOCUMENT READY SCRIPT :: FINISH */

@@ -2,7 +2,7 @@
  * LOOPSHAPE MAIN SCSS FILE
  */
 @import "grid/normalize";
-//@import "grid/foundation";
+@import "grid/foundation";
 @import "layout/wordpress";
 
 @import "grid/template";

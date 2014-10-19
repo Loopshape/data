@@ -5,6 +5,15 @@
 }
 
 #page {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: auto !important;
+  min-height: 100%;
+  
+  button, input[type="submit"] {
+    font-size: 1.25em !important;
+  }
   
   #header {
     
@@ -17,6 +26,23 @@
       h3 {
         font-size: 61px !important;
       }
+    }
+    
+  }
+  
+  #stage {
+    
+    p {
+      font-size: 1.2em !important;
+    }
+    
+    #content {
+      max-width: 96% !important;
+      padding-right: 5% !important;
+    }
+    
+    #sidebar {
+      margin-left: 0 !important;
     }
     
   }
