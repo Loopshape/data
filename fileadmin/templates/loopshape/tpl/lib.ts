@@ -39,3 +39,17 @@ temp.gshare = TEXT
 temp.gshare.value = <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'de'}</script>
 lib.gshare < temp.gshare
 
+temp.maincol = CONTENT
+temp.maincol < styles.content.get
+temp.maincol.select.where = colPos = 4
+lib.main < temp.maincol
+
+[globalVar = TSFE:id != 1,2]
+lib.googlebox >
+[global]
+temp.googlebox = TEXT
+temp.googlebox.value = <div class="wideBox center"><div class="g-page" data-width="420" data-href="//plus.google.com/u/0/116495115034901092882" data-rel="publisher"></div></div>
+[globalVar = TSFE:id = 1] && [globalVar = TSFE:id = 2]
+lib.googlebox < temp.googlebox
+[global]
+

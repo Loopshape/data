@@ -20,10 +20,6 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
 
             /* DOCUMENT READY SCRIPT :: START */
 
-            $('#teaser').show().find('#teaserImage').addClass('active').animate({
-                'max-height' : '+=' + ($('#teaserImage img').height() + 45) + 'px'
-            }, 1000);
-
             var itemIndex = 1;
             $('#navi select option a').each(function() {
                 if (itemIndex >= 3 && itemIndex <= 12)
@@ -31,21 +27,28 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
                 itemIndex++;
             });
 
-            $page = $('#page');
-            $(window).bind('mousewheel', function(e) {
+            if ($('#page').length)
+                $(window).bind('mousewheel', function(e) {
 
-                $offy = $page.offset().top;
+                    $page = $('#page');
+                    $offy = $page.offset().top;
 
-                if (e.originalEvent.wheelDelta > 0) {
-                    $page.animate({
-                        'top' : '+=6px'
-                    }, 250);
-                } else {
-                    $page.animate({
-                        'top' : '-=6px'
-                    }, 250);
-                }
-            });
+                    if (e.originalEvent.wheelDelta > 0) {
+                        $page.animate({
+                            'top' : '+=6px'
+                        }, 250);
+                    } else {
+                        $page.animate({
+                            'top' : '-=6px'
+                        }, 250);
+                    }
+                });
+
+            setTimeout(function() {
+                $('#teaser').show().find('#teaserImage').addClass('active').animate({
+                    'max-height' : '+=' + ($('#teaserImage img').height() + 45) + 'px'
+                }, 1000);
+            }, 500);
 
             /* DOCUMENT READY SCRIPT :: FINISH */
 
@@ -70,6 +73,9 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
         }
     });
 
-    var app = new App();
+    $(document).ready(function($) {
+        var app = new App();
+        return app;
+    });
 
 });

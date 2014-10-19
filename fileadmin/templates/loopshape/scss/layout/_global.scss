@@ -19,6 +19,38 @@ select {
   height: auto !important;
 }
 
-.clearer {
-  clear: both !important;
+// micro clearfix v2
+.clearer:before, .cf:before,
+.clearer:after, .cf:after {
+    content: " "; 
+    display: table;
 }
+.clearer:after, .cf:after {
+    clear: both;
+}
+.clearer, .cf {
+    *zoom: 1;
+}
+
+body .wideBox {
+  position: relative !important;
+  display: inline-block !important;
+  text-align: center !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+body .textCenter,
+body .center {
+  text-align: center !important;
+}
+
+body .textRight {
+  text-align: right !important;
+}
+
+body .textLeft {
+  text-align: left !important;
+}
+

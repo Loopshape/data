@@ -85,10 +85,15 @@ body.moz select {
     height: auto !important;
     
     > * {
+      position: relative;
       float: left;
       padding: 15px;
-      min-width: 320px;
-      * {
+      width: 100% !important;
+      min-width: 100% !important;
+      > * {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
         margin: 0;
         padding: 0;
       }
@@ -103,6 +108,7 @@ body.moz select {
     width: 100%;
     height: auto !important;
     padding: 30px 0;
+    border-top: 20px solid $borderBar-color !important; 
     background-color: $areaContentColor !important;
     
     #navi {
@@ -139,6 +145,8 @@ body.moz select {
   
   #footer {
     position: relative;
+    clear: both;
+    display: inline-block;
     width: 100%;
     float: left;
     padding: 45px 0 0;
@@ -146,9 +154,10 @@ body.moz select {
     background-color: $upperBar-color;
     
     ul {
-      clear: both;
       float: left;
-      width: 100%;
+      width: 100% !important;
+      max-width: 25% !important;
+      line-height: 175% !important;
       display: block;
       
       > * > * {
@@ -157,6 +166,29 @@ body.moz select {
       
       li {
         width: 100%;
+        float: left;
+        list-style: none;
+        margin-left: 0 !important;
+      }
+    }
+    
+    ul + ul {
+      width: 100% !important;
+      max-width: 48% !important;
+      li {
+        width: 100%;
+        float: left;
+        list-style: none;
+        margin-left: 0 !important;
+      }
+    }
+    
+    ul + ul + ul {
+      width: 100% !important;
+      max-width: 11% !important;
+      li {
+        width: 100%;
+        max-width: 33.333%;
         float: left;
         list-style: none;
         margin-left: 0 !important;

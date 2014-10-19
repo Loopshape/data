@@ -99,7 +99,6 @@ page.includeJS{
     #page = Templates/js/main.js
     
     login {
-      
         <script>
             (function() {
               var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -107,7 +106,10 @@ page.includeJS{
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
             })();
         </script>
-      
+    }
+    
+    googlebox {
+      <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'en-GB'}</script>
     }
     
 }
