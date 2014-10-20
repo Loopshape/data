@@ -2,6 +2,7 @@
  * LOOPSHAPE MAIN SCSS FILE
  */
 @import "grid/normalize";
+@import "grid/uniform";
 @import "grid/foundation";
 @import "layout/wordpress";
 
@@ -17,8 +18,7 @@
 @import "layout/contactform";
 @import "layout/teaser";
 
+@import "layout/socialmedia";
+
+@import "layout/forum";
 @import "layout/blog";
-
-@import "layout/google";
-
-@import "/Templates/css/uniform/themes/jeans/css/uniform.jeans.min.css";

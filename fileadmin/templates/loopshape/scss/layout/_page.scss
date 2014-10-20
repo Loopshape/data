@@ -2,10 +2,13 @@
 
 * {
   outline: none !important;
-  border-color: #012 !important;
+  //border-color: #012 !important;
+  border: none !important;
   &:focus,
   &:hover {
     outline: none !important;
+    outline: none !important;
+    border: none !important;
   }
 } 
 
@@ -73,6 +76,9 @@ body.moz select {
       float: right !important;
       width: 20%;
       background-color: $interactButton-color - #080808 !important;
+      > * {
+        opacity: 0.75 !important;
+      }
     }
     
   }
@@ -112,18 +118,21 @@ body.moz select {
     background-color: $areaContentColor !important;
     
     #navi {
-      width: 25%;
+      width: 100% !important;
+      max-width: 25% !important;
       float: left;
-      padding: 15px;
+      padding: 0 30px;
       min-width: 320px;
     }
   
     > .cWrap {
       position: relative;
-      width: 75% !important;
+      width: 100% !important;
+      max-width: 75% !important;
       float: right;
-      padding: 0;
+      padding: 30px !important;
       min-width: 320px;
+      background-color: $pageAdditiveColor !important;
     }
     
     #content {
@@ -159,6 +168,8 @@ body.moz select {
       max-width: 25% !important;
       line-height: 175% !important;
       display: block;
+      
+      opacity: 0.75 !important;
       
       > * > * {
         line-height: 25% !important;
@@ -241,6 +252,31 @@ body.moz select {
       min-width: 320px;
     }
   
+    }
+    
+  }
+  
+}
+
+@media all and (max-width:1023px) {
+  
+  #page {
+    
+    #teaserImage {
+      img.panel {
+        min-width: 1280px;
+      }
+    }
+    
+    #content,
+    #sidebar {
+      * {
+        clear: both;
+        float: none;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
     }
     
   }

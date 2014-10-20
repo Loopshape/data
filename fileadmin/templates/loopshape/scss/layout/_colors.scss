@@ -1,3 +1,6 @@
+/*
+ * LAYOUT COLORS BLUE STEPS
+ */
 $upperBar-color: #182838;
 
 $headernavi-color: #223344;
@@ -9,3 +12,61 @@ $interactButton-color: #234;
 
 $areaLayoutColor: $upperBar-color;
 $areaContentColor: #223344;
+
+$highlightGlowColor: #e8f0ff;
+
+/*
+ * COMPLEMENT COLORS FOR MAIN COLOR
+ */
+
+$pageColorMedium: #ed7e00;
+$pageAdditiveColor: rgba(255,255,255,0.1);
+
+/*
+ * COLORWHEEL LOGIC
+ */
+
+// grey
+$greyToBlack: #000;
+$greyToDeep: #222;
+$greyToFull: #555;
+$greyToHalf: #888;
+$greyToLight: #aaa;
+$greyToGlow: #ccc;
+$greyToWhite: #fff;
+
+// red
+$redToBlack: #000 + #000;
+$redToDeep: #222 + #300;
+$redToFull: #555 + #500;
+$redToHalf: #888 + #700;
+$redToLight: #aaa + #500;
+$redToGlow: #ccc + #300;
+$redToWhite: #fff + #000;
+
+// blue
+$blueToBlack: #000 + #000;
+$blueToDeep: #222 + #003;
+$blueToFull: #555 + #005;
+$blueToHalf: #888 + #007;
+$blueToLight: #aaa + #005;
+$blueToGlow: #ccc + #003;
+$blueToWhite: #fff + #000;
+
+// green
+$greenToBlack: #000 + #000;
+$greenToDeep: #222 + #030;
+$greenToFull: #555 + #050;
+$greenToHalf: #888 + #070;
+$greenToLight: #aaa + #050;
+$greenToGlow: #ccc + #030;
+$greenToWhite: #fff + #000;
+
+// yellow
+$yellowToBlack: #000 + #310;
+$yellowToDeep: #222 + #530;
+$yellowToFull: #555 + #750;
+$yellowToHalf: #888 + #970;
+$yellowToLight: #aaa + #750;
+$yellowToGlow: #ccc + #530;
+$yellowToWhite: #fff + #310;

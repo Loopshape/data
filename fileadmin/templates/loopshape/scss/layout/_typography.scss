@@ -10,6 +10,13 @@ $sizeHeadline: 60px;
   letter-spacing: 0.008em !important;
 }
 
+*, *:hover, *:focus {
+  text-decoration: none !important;
+  border-collapse: collapse !important;
+  border: none !important;
+  outline: none;
+}
+
 br {
   line-height: 175% !important;
 }
@@ -20,6 +27,10 @@ br {
   width: 100%;
   height: auto !important;
   min-height: 100%;
+  
+  label {
+    font-size: 1.25em !important;
+  }
   
   button, input[type="submit"] {
     font-size: 1.25em !important;
@@ -56,7 +67,7 @@ br {
       text-decoration: none !important;
       border-bottom: 1px dotted #fff !important;
       &:hover {
-        //border-bottom: 1px dotted #4f4 !important;
+        color: $highlightGlowColor !important;
         border-bottom: 3px solid #fff !important;
       }
     }
@@ -174,9 +185,22 @@ body select {
   }
 }
 
-body .aboutmePic {
-  width: 86%;
-  float: left;
+body .placeholder {
+  position: relative;
+  left: 30px !important; 
+  
+  .aboutmePic {
+    position: relative;
+    left: 0 !important;
+    display: block;
+    width: 100%;
+    max-width: 94%;
+    float: none;
+    padding: 0 !important;
+    background-color: $areaContentColor !important;
+    border: 15px solid $areaContentColor !important;
+  }
+  
 }
 
 @media all and (max-width:1600px) {
@@ -243,9 +267,11 @@ h3 {
 
 h2 {
   font-size: 2.75em !important;
+  text-shadow: 0 0 2px #fff !important;
 }
 
 h1, h2.h1 {
   font-size: 3.5em !important;
+  text-shadow: 0 0 2px #fff !important;
 }
 

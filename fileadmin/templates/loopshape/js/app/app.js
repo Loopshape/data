@@ -27,7 +27,7 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
                 itemIndex++;
             });
 
-            if ($('#page').length)
+            if ($('#page').length != 0)
                 $(window).bind('mousewheel', function(e) {
 
                     $page = $('#page');
@@ -43,6 +43,10 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
                         }, 250);
                     }
                 });
+
+            $('li.item27').on(function() {
+                window.open($(this).find('a').prop('href'), '_blank');
+            });
 
             setTimeout(function() {
                 $('#teaser').show().find('#teaserImage').addClass('active').animate({

@@ -27,7 +27,7 @@ temp.headernavi {
   20 {
     #special = directory
     special = list
-    special.value = 1,3,4,5
+    special.value = 1,3,4,27,5
     1 {
       expAll = 1
       NO {
@@ -84,7 +84,7 @@ lib.headernavi < temp.headernavi
 temp.dropdownmenu= HMENU
 temp.dropdownmenu {
   
-  wrap = <form action=""><p><select onchange="(this.selectedIndex >= 1 && this.selectedIndex <= 12) ? window.open(this.options[this.selectedIndex].value,'_blank') : window.location=this.options[this.selectedIndex].value;">|</select></p></form>
+  wrap = <form action=""><p><select onchange="(this.selectedIndex >= 1 && this.selectedIndex <= 13) ? window.open(this.options[this.selectedIndex].value,'_blank') : window.location=this.options[this.selectedIndex].value;">|</select></p></form>
   
   1 = TMENU
   

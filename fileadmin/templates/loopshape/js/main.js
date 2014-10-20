@@ -23,8 +23,9 @@ require.config({
         tooltipsy : './app/lib/tooltipsy-master/tooltipsy.min',
         pace : './app/lib/pace.min',
         foundation : './../scss/foundation/js/foundation.min',
-        uniform : './../css/uniform/jquery.uniform.min',
+        uniform : './app/lib/uniform/jquery.uniform.min',
         mousewheel : './app/lib/jquery-mousewheel/jquery.mousewheel.min',
+        draggable : './../../bower_components/greensock/src/minified/utils/Draggable.min',
         // Website Logic
         app : './app/app',
         template : './app/class/_template'
@@ -50,6 +51,9 @@ require.config({
         },
         timelinemax : {
             exports : 'TimelineMax'
+        },
+        draggable : {
+            exports : 'Draggable'
         },
         template : {
             deps : ['backbone'],
