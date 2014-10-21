@@ -55,6 +55,8 @@ page {
           10 < lib.teaser
         }
         
+        scene < lib.scene
+        
         #navi < lib.navi
         #navi < styles.content.get
         #navi.select.where = colPos = 3

@@ -71,6 +71,8 @@ config.doctype = html5
 config.doctypeSwitch = 1
 config.xhtml_cleaning = all
 
+config.bodyTag = <body id="cms">
+
 #FAVICON
 page.shortcutIcon = Templates/img/favicon.ico
  
@@ -113,7 +115,6 @@ page.includeJS{
     }
     
 }
-
 
 #
 # Responsive Design Optimization
@@ -174,4 +175,11 @@ tt_content.image.20.1.sourceCollection {
   # width descriptor of the 'middle' srcset attribute
   # in this case at viewport width of 600px
   middle.srcsetCandidate = 640w 
+}
+
+page.headerData  {
+    3890 = TEXT
+    3890.value = <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    3900 = TEXT
+    3900.value = <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
 }

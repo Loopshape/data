@@ -84,7 +84,7 @@ lib.headernavi < temp.headernavi
 temp.dropdownmenu= HMENU
 temp.dropdownmenu {
   
-  wrap = <form action=""><p><select onchange="(this.selectedIndex >= 1 && this.selectedIndex <= 13) ? window.open(this.options[this.selectedIndex].value,'_blank') : window.location=this.options[this.selectedIndex].value;">|</select></p></form>
+  wrap = <form action=""><p><select onchange="(this.selectedIndex >= 1 && this.selectedIndex <= 14) ? window.open(this.options[this.selectedIndex].value,'_blank') : window.location=this.options[this.selectedIndex].value;">|</select></p></form>
   
   1 = TMENU
   

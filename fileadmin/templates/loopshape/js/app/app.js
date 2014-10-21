@@ -27,11 +27,49 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
                 itemIndex++;
             });
 
-            if ($('#page').length != 0)
+            $('li.item27').on(function() {
+                window.open($(this).find('a').prop('href'), '_blank');
+            });
+
+            // login slide on hover
+            $('#page #header #login').css({
+                'top' : -(($('#page #header #login').height() + 15) * 2) + 'px'
+            });
+            $(document).ready(function() {
+
+                $('#headerNavi ul li').eq(3).find('a').attr('target', '_blank');
+
+                $('#header').on('mouseover', function() {
+                    $('#page #header #login').stop().show().animate({
+                        'top' : '0' + 'px',
+                        'opacity' : '0.99'
+                    }, 1000);
+                }).on('mouseout', function() {
+                    $('#page #header #login').stop().animate({
+                        'top' : -(($('#page #header #login').height() + 15) * 2) + 'px',
+                        'opacity' : '0'
+                    }, 1000, function() {
+                        $(this).hide();
+                    });
+                });
+
+                $('#page').css({
+                    'padding-bottom' : ($('#footer').height() + 60) + 'px'
+                });
+
+                $('#headerNavi').css({
+                    'height' : $('#headerNavi ul').innerHeight()
+                });
+                
+                $('#teaser').show().find('#teaserImage').addClass('active').animate({
+                    'max-height' : '+=' + ($('#teaserImage img').height() + 45) + 'px'
+                }, 1000);
+
+                /*
+                var $page = $('#page');                
                 $(window).bind('mousewheel', function(e) {
 
-                    $page = $('#page');
-                    $offy = $page.offset().top;
+                    var $offy = $page.offset().top;
 
                     if (e.originalEvent.wheelDelta > 0) {
                         $page.animate({
@@ -42,17 +80,11 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
                             'top' : '-=6px'
                         }, 250);
                     }
+
                 });
-
-            $('li.item27').on(function() {
-                window.open($(this).find('a').prop('href'), '_blank');
+                */
+               
             });
-
-            setTimeout(function() {
-                $('#teaser').show().find('#teaserImage').addClass('active').animate({
-                    'max-height' : '+=' + ($('#teaserImage img').height() + 45) + 'px'
-                }, 1000);
-            }, 500);
 
             /* DOCUMENT READY SCRIPT :: FINISH */
 

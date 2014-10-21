@@ -1,4 +1,14 @@
 #login {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  z-index: 1000 !important;
+  
+  border: 15px solid $upperBar-color !important;
+  
+  -webkit-box-shadow: inset 0 0 240px 0 rgba(255,255,255,0.1);
+  box-shadow: inset 0 0 240px 0 rgba(255,255,255,0.1);
   
   * {
     border-width: 0 !important;

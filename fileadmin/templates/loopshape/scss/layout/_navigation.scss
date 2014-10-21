@@ -31,14 +31,14 @@ body #page {
     
     li {
       position: relative;
-      left: 15px;
+      left: 0;
       float: left;
       width: auto !important;
       list-style: none;
-      margin: 0 30px 0;
+      margin: 0 20px 0;
       padding: 0;
       a {
-        font-size: 2em !important;
+        font-size: 1.5em !important;
         padding: 6px 10px !important;
       }
       
@@ -68,6 +68,10 @@ body #page {
     
     option {
       padding: 15px !important;
+    }
+    
+    select:hover {
+      background-color: $areaContentColor + #222 !important;
     }
     
   }
