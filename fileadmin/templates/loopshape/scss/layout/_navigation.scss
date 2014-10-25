@@ -77,3 +77,13 @@ body #page {
   }
 
 }
+
+#headerNavi > section > ul > li.wide:nth-child(4) > a {
+  color: #fff !important;
+  text-shadow: 0 0 5px $highlightGlowColor !important;
+  &:hover {
+    opacity: 1 !important;
+    color: #fff !important;
+    text-shadow: 0 0 10px $highlightGlowColor !important;
+  }
+}

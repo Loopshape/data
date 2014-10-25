@@ -1,0 +1,124 @@
+<!-- thanks http://www.telize.com/, http://dev.maxmind.com/geoip/ (JSON IP and GeoIP API) -->
+<section class="geoData">
+    
+    <ul>
+        <li>
+            <h3>USER BROWSER-SETTINGS</h3>
+        </li>
+    </ul>
+    
+    <ul>
+
+        <script type="application/javascript">
+          function getgeoip(json){
+                document.write(''
+                +'<li><b>IP address: </b>'+json.ip+'</li>'
+                +'<li><b>Country: </b>'+json.country+'</li>'
+                +'<li><b>City: </b>'+json.city+'</li>'
+                +'<li><b>Country Code: </b>'+json.country_code+'</li>'
+                +'<li><b>Region Code: </b>'+json.region_code+'</li>'
+                +'<li><b>Region: </b>'+json.region+'</li>'
+                +'<li><b>Continent Code: </b>'+json.continent_code+'</li>'
+                +'<li><b>Latitude: </b>'+json.latitude+'</li>'
+                +'<li><b>Longitude: </b>'+json.longitude+'</li>'
+                +'<li><b>DMA Code: </b>'+json.dma_code+'</li>'
+                +'<li><b>Area Code: </b>'+json.area_code+'</li>'
+                +'<li><b>Autonomous System Number: </b>'+json.asn+'</li>'
+                +'<li><b>Internet service provider: </b>'+json.isp+'</li>'
+                +'<li><b>Time Zone: </b>'+json.timezone+'</li>'
+                +'</ul>'
+                +'<ul>'
+                )
+        }
+        </script>
+
+        <script type="application/javascript" src="http://www.telize.com/geoip?callback=getgeoip"></script>
+
+        <script type="text/javascript">
+            var OSName = "Unknown OS";
+            if (navigator.appVersion.indexOf("Win") != -1)
+                OSName = "Windows";
+            if (navigator.appVersion.indexOf("Mac") != -1)
+                OSName = "MacOS";
+            if (navigator.appVersion.indexOf("X11") != -1)
+                OSName = "UNIX";
+            if (navigator.appVersion.indexOf("Linux") != -1)
+                OSName = "Linux";
+            document.write('<li><b>OS: </b>' + OSName + '</li>');
+        </script>
+        
+        <script type="text/javascript">
+        
+        var nVer = navigator.appVersion;
+        var nAgt = navigator.userAgent;
+        var browserName  = navigator.appName;
+        var fullVersion  = ''+parseFloat(navigator.appVersion); 
+        var majorVersion = parseInt(navigator.appVersion,10);
+        var nameOffset,verOffset,ix;
+        
+        if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+         browserName = "Opera";
+         fullVersion = nAgt.substring(verOffset+6);
+         if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+           fullVersion = nAgt.substring(verOffset+8);
+        }
+        
+        else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+         browserName = "Microsoft Internet Explorer";
+         fullVersion = nAgt.substring(verOffset+5);
+        }
+         
+        else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+         browserName = "Chrome";
+         fullVersion = nAgt.substring(verOffset+7);
+        }
+         
+        else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+         browserName = "Safari";
+         fullVersion = nAgt.substring(verOffset+7);
+         if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+           fullVersion = nAgt.substring(verOffset+8);
+        }
+         
+        else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+         browserName = "Firefox";
+         fullVersion = nAgt.substring(verOffset+8);
+        }
+        // In most other browsers, "name/version" is at the end of userAgent 
+        else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+                  (verOffset=nAgt.lastIndexOf('/')) ) 
+        {
+         browserName = nAgt.substring(nameOffset,verOffset);
+         fullVersion = nAgt.substring(verOffset+1);
+         if (browserName.toLowerCase()==browserName.toUpperCase()) {
+          browserName = navigator.appName;
+         }
+        }
+        // trim the fullVersion string at semicolon/space if present
+        if ((ix=fullVersion.indexOf(";"))!=-1)
+           fullVersion=fullVersion.substring(0,ix);
+        if ((ix=fullVersion.indexOf(" "))!=-1)
+           fullVersion=fullVersion.substring(0,ix);
+        
+        majorVersion = parseInt(''+fullVersion,10);
+            if (isNaN(majorVersion)) {
+             fullVersion  = ''+parseFloat(navigator.appVersion); 
+             majorVersion = parseInt(navigator.appVersion,10);
+        }
+        
+        document.write(''
+             +'<li><b>Browser Code Name: </b>'+browserName+'</li>'
+             +'<li><b>Browser Name: </b>'+navigator.appName+'</li>'
+             +'<li><b>Full version: </b>'+fullVersion+'</li>'
+             +'<li><b>Major version: </b>'+majorVersion+'</li>'
+             +'<li><b>User-agent header: </b>'+navigator.userAgent+'</li>'
+             +'<li><b>User-agent language: </b>'+navigator.systemLanguage+'</li>'
+             +'<li><b>Cookies Enabled: </b>'+navigator.cookieEnabled+'</li>'
+             +'<li><b>Browser Language: </b>'+navigator.language+'</li>'
+             +'<li><b>Browser Online: </b>'+navigator.onLine+'</li>'
+        )
+        </script>
+        
+    </ul>
+    
+</section>

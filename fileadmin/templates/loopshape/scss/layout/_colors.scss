@@ -25,6 +25,12 @@ $blueHigh: #567;
 
 $footerColor: #172533;
 
+$orangeMedium: #e44d26 + #222;
+$orangeDark: $orangeMedium - (#f16529 - #e44d26);
+$orangeLight: #f16529;
+
+$transBlack: rgba(0,0,0,0.5);
+
 /*
  * COMPLEMENT COLORS FOR MAIN COLOR
  */

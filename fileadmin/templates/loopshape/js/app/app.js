@@ -35,55 +35,61 @@ require(['foundation', 'mousewheel'], function(Foundation, Mousewheel) {
             $('#page #header #login').css({
                 'top' : -(($('#page #header #login').height() + 15) * 2) + 'px'
             });
-            $(document).ready(function() {
 
-                $('#headerNavi ul li').eq(3).find('a').attr('target', '_blank');
+            $('#headerNavi ul li').eq(3).find('a').attr('target', '_blank');
 
-                $('#header').on('mouseover', function() {
-                    $('#page #header #login').stop().show().animate({
-                        'top' : '0' + 'px',
-                        'opacity' : '0.99'
-                    }, 1000);
-                }).on('mouseout', function() {
+            $('#header,#headerNavi').on('mouseover', function() {
+                var $screenWidth = $(document).width();
+                if ($(window).width() < 720)
+                    return;
+                $('#page #header #login').stop().show().animate({
+                    'top' : '0' + 'px',
+                    'opacity' : '0.99'
+                }, 1000);
+            }).on('mouseout', function() {
+                if ($(window).width() < 720)
+                    return;
+                $('#page #header #login').stop().animate({
+                    'top' : -(($('#page #header #login').height() + 15) * 2) + 'px',
+                    'opacity' : '0'
+                }, 1000, function() {
+                    $(this).hide();
+                });
+            });
+            
+            $(window).resize(function() {
+                if ($(window).width() < 720) {
+                    $('#page #header #login').stop().animate({
+                        'top' : 0 + 'px',
+                        'opacity' : '1 !important'
+                    });
+                } else {
                     $('#page #header #login').stop().animate({
                         'top' : -(($('#page #header #login').height() + 15) * 2) + 'px',
-                        'opacity' : '0'
-                    }, 1000, function() {
-                        $(this).hide();
+                        'opacity' : '0 !important'
                     });
-                });
+                }
+            });
 
-                $('#page').css({
-                    'padding-bottom' : ($('#footer').height() + 60) + 'px'
-                });
+            $('#page').css({
+                'padding-bottom' : ($('#footer').height() + 60) + 'px'
+            });
 
-                $('#headerNavi').css({
-                    'height' : $('#headerNavi ul').innerHeight()
-                });
-                
-                $('#teaser').show().find('#teaserImage').addClass('active').animate({
-                    'max-height' : '+=' + ($('#teaserImage img').height() + 45) + 'px'
-                }, 1000);
+            $('#headerNavi').css({
+                'height' : $('#headerNavi ul').innerHeight()
+            });
 
-                /*
-                var $page = $('#page');                
-                $(window).bind('mousewheel', function(e) {
+            $('#teaser').show().find('#teaserImage').addClass('active').animate({
+                'max-height' : '+=' + ($('#teaserImage img').height() + 45) + 'px'
+            }, 1000);
 
-                    var $offy = $page.offset().top;
-
-                    if (e.originalEvent.wheelDelta > 0) {
-                        $page.animate({
-                            'top' : '+=6px'
-                        }, 250);
-                    } else {
-                        $page.animate({
-                            'top' : '-=6px'
-                        }, 250);
-                    }
-
-                });
-                */
-               
+            $('#teaser').on('click', function(e) {
+                var that = $(this);
+                e.preventDefault();
+                $(this).find('#scene').fadeIn('slow');
+                setTimeout(function() {
+                    that.find('#scene').fadeOut('slow');
+                }, 6000);
             });
 
             /* DOCUMENT READY SCRIPT :: FINISH */

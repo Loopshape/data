@@ -68,6 +68,8 @@ br {
       }
     }
     .body {
+      position: absolute;
+      left: 24%;
       h3 {
         font-size: 61px !important;
       }
@@ -164,7 +166,18 @@ br {
 }
 
 .placeholder {
-  max-height: 420px;
+  min-width: 320px !important;
+  img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 320px !important;
+    max-height: 320px !important;
+  }
+}
+
+#contactIcon {
+  width: 128px !important;
+  height: auto !important;
 }
 
 form * {
@@ -211,7 +224,7 @@ body select {
 
 body .placeholder {
   position: relative;
-  left: 30px !important; 
+  left: 0 !important; 
   
   .aboutmePic {
     position: relative;
@@ -235,12 +248,12 @@ body .placeholder {
       
       #logo {
         h1 {
-          font-size: 3.4em !important;
+          font-size: 2.4em !important;
         }
       }
       .body {
         h3 {
-          font-size: 46px !important;
+          font-size: 28px !important;
         }
       }
       
@@ -250,21 +263,15 @@ body .placeholder {
   
 }
 
-@media all and (max-width:1600px) {
+@media all and (max-width:720px) {
   
   #page {
+    font-size: 0.82em !important;
   
     #header {
       
-      #logo {
-        h1 {
-          font-size: 2.4em !important;
-        }
-      }
       .body {
-        h3 {
-          font-size: 28px !important;
-        }
+        display: none !important;
       }
       
     }
@@ -297,6 +304,14 @@ h2 {
 h1, h2.h1 {
   font-size: 3.5em !important;
   text-shadow: 0 0 2px #fff !important;
+}
+
+input[type=text], input[type=password], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=email], input[type=number], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=color] {
+  height: auto !important;
+  padding: 12px 20px !important;
+}
+input, textarea, select {
+  font-size: 1.36em !important;
 }
 
 .noListItems,
