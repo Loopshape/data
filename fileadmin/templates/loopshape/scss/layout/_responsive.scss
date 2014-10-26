@@ -1,0 +1,132 @@
+html {
+  overflow-x: hidden !important;
+}
+
+* {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+label {
+  max-width: 23% !important;
+}
+input, select {
+  max-width: 75% !important;
+}
+
+#navi select,
+#navi input {
+  max-width: 100% !important;
+}
+
+#page {
+  position: relative !important;
+  clear: both;
+  float: left;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100% !important;
+  min-width: 320px !important;
+}
+
+#page #stage > *,
+#page #stage > * > *,
+#page #stage > * > * > * {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+#page #stage .cWrap,
+#page #stage .cWrap > * {
+  clear: left;
+  float: left;
+  max-width: 100% !important;
+}
+
+@media all and (min-width:1280px) {
+  
+  #page #stage #navi {
+    clear: both;
+    float: left;
+    padding-top: 0 !important;
+    width: 100% !important;
+    max-width: 25% !important;
+  }
+  
+  #page #stage .cWrap {
+    clear: right;
+    float: right;
+    max-width: 75% !important;
+     
+    #content {
+      width: 100% !important;
+      max-width: 75% !important;
+    }
+    
+    #sidebar {
+      width: 100% !important;
+      max-width: 25% !important;
+    }
+    
+  }
+}
+
+@media all and (max-width:1280px) {
+  html body #page {
+    font-size: 0.9em !important;
+    
+    #teaser {
+      img {
+        min-width: 1280px !important;
+      }
+    }
+    
+    #stage {
+      
+      img {
+        float: left;
+        max-width: 320px !important;
+      }
+      
+      #navi {
+        max-width: 100% !important;
+      }
+      
+      .cWrap {
+        max-width: 100% !important;
+      }
+      
+    }
+    
+  }
+}
+
+@media all and (max-width:800px) {
+  html body #page {
+    font-size: 0.82em !important;
+    
+    #footer {
+      font-size: 0.7em !important;
+    }
+  }
+}
+
+@media all and (max-width:640px) {
+  html body #page {
+    #footer {
+      ul {
+        display: block;
+        clear: both;
+        float: left;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 98% !important;
+        height: auto !important;
+        padding-left: 30px !important;
+      }
+      ul + ul {
+        display: none;
+      }
+    }
+  }
+}
+
