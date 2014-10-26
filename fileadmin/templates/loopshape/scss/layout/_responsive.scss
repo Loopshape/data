@@ -112,6 +112,18 @@ input, select {
 
 @media all and (max-width:640px) {
   html body #page {
+    #teaser {
+      ul {
+        li:first-of-type {
+          display: none !important;
+        }
+        li {
+          width: 100% !important;
+          max-width: 50% !important;
+          line-height: 100% !important;
+        }
+      }
+    }
     #footer {
       ul {
         display: block;
@@ -126,7 +138,9 @@ input, select {
       ul + ul {
         display: none;
       }
+      ul + ul + ul {
+        display: block;
+      }
     }
   }
 }
-

@@ -17,7 +17,7 @@
         <div id="login">
             <f:format.html parseFuncTSPath="">
                 {login}
-                <div class="clearer"></div>
+                <div class="cf"></div>
                 <div id="gplus">
                     {gplus}
                 </div>
@@ -25,18 +25,31 @@
         </div>
 
     </div>
-    
-    <div id="headerNavi">
+
+    <div class="cf"></div>
+
+    <div id="headerNavi" class="headerArea">
+        <img class="arrowLiner" src="/Templates/img/area/arrowLiner.png" width="auto" height="100%" />
         <f:format.html parseFuncTSPath="">
             {headernavi}
         </f:format.html>
     </div>
 
+    <div class="cf"></div>
+
     <div id="teaser">
         <f:format.html parseFuncTSPath="">
             {teaser}
         </f:format.html>
+        <div id="scene">
+            <f:format.html parseFuncTSPath="">
+                {scene}
+            </f:format.html>
+            <f:render partial="netinfo" />
+        </div>
     </div>
+
+    <div class="cf"></div>
 
     <div id="stage">
 
@@ -52,8 +65,7 @@
                 <!--TYPO3SEARCH_begin-->
                 <f:format.html parseFuncTSPath="">
                     {content}
-                    <div class="clearer"></div>
-                    {gshare}
+                    <div class="cf"></div>
                 </f:format.html>
                 <!--TYPO3SEARCH_end-->
             </div>
@@ -66,14 +78,16 @@
 
         </div>
 
-        <div class="clearer"></div>
-
     </div>
 
-    <div id="footer">
+    <div class="cf"></div>
+
+    <div id="footer" class="footerArea">
         <f:format.html parseFuncTSPath="lib.footer">
             {footer}
         </f:format.html>
     </div>
+
+    <div class="cf"></div>
 
 </section>

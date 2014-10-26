@@ -55,6 +55,8 @@ page {
           10 < lib.teaser
         }
         
+        scene < lib.scene
+        
         #navi < lib.navi
         #navi < styles.content.get
         #navi.select.where = colPos = 3
@@ -70,6 +72,8 @@ page {
         
         sidebar < styles.content.get
         sidebar.select.where = colPos = 6
+        
+        globalnews < tt_news
         
         footer < lib.footer
         #footer < styles.content.get

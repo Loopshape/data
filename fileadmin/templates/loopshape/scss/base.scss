@@ -2,8 +2,12 @@
  * LOOPSHAPE MAIN SCSS FILE
  */
 @import "grid/normalize";
+
 @import "grid/uniform";
+
 @import "grid/foundation";
+//@import "grid/font-awesome";
+
 @import "layout/wordpress";
 
 @import "grid/template";
@@ -22,3 +26,11 @@
 
 @import "layout/forum";
 @import "layout/blog";
+
+@import "layout/geodata";
+
+@import "layout/interactive";
+
+@import "layout/news";
+
+@import "layout/responsive";
