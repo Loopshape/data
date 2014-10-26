@@ -19,3 +19,4 @@ module.tx_sysnote.view.layoutRootPath = /Templates/Layouts/
 module.tx_sysnote.view.partialRootPath = /Templates/Partials/
 module.tx_sysnote.view.templateRootPath = /Templates/
 
+<INCLUDE_TYPOSCRIPT: source="FILE:Templates/ts/tt_news.constants.ts">

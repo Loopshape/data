@@ -91,10 +91,10 @@ br {
     
     a {
       text-decoration: none !important;
-      border-bottom: 1px dotted #fff !important;
+      border-bottom: 1px dotted #fff;
       &:hover {
         color: $highlightGlowColor !important;
-        border-bottom: 3px solid #fff !important;
+        border-bottom: 3px solid #fff;
       }
     }
     

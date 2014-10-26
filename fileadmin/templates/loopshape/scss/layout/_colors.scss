@@ -20,7 +20,7 @@ $redBright: #860000;
 
 $blueBlack: #172533;
 $blueDark: #123;
-$blue: #345;
+$blueMedium: #345;
 $blueHigh: #567;
 
 $footerColor: #172533;
@@ -30,6 +30,9 @@ $orangeDark: $orangeMedium - (#f16529 - #e44d26);
 $orangeLight: #f16529;
 
 $transBlack: rgba(0,0,0,0.5);
+$transGrey: rgba(0,0,0,0.25);
+$transGlow: rgba(255,255,255,0.10);
+$transWhite: rgba(255,255,255,0.25);
 
 /*
  * COMPLEMENT COLORS FOR MAIN COLOR

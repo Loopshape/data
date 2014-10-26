@@ -73,6 +73,8 @@ page {
         sidebar < styles.content.get
         sidebar.select.where = colPos = 6
         
+        globalnews < tt_news
+        
         footer < lib.footer
         #footer < styles.content.get
         #footer.select.where = colPos = 6
